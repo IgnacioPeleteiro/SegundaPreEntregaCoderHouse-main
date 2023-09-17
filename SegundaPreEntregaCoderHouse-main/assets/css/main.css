@@ -84,7 +84,14 @@
   width: calc(50% - 2rem);
 }
 .services .service img {
-  max-width: 80%;
+  max-width: 55%;
+}
+.services .service .grayscale-animation {
+  transition: filter 0.5s ease;
+  filter: grayscale(100%);
+}
+.services .service .grayscale-animation:hover {
+  filter: grayscale(0%);
 }
 
 .contact {
@@ -126,6 +133,18 @@
 
 .contact-info p {
   color: #555;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+h2 {
+  animation: jump 1s ease infinite;
 }
 
 @media (max-width: 767px) {
